@@ -4,11 +4,17 @@ function SidebarTitle(props) {
         <div>
           <div>
             <span className="inline-block w-[4px] h-[1.3em] bg-[#34d399] mr-[8px]"></span>
-            <p className="inline-block font-bold tracking-wide font-raleway text-white text-2xl">
+            {/* <p className="inline-block font-bold tracking-wide font-raleway text-white text-2xl">
               {props.heading}
-            </p>
+            </p> */}
+
+            <p className={props.styleHeading}>{props.heading}</p>
           </div>
-          <p className="font-normal tracking-wide font-raleway text-white">
+          {/* <p className="font-normal tracking-wide font-raleway text-white">
+            {props.body}
+          </p> */}
+
+          <p className={props.styleBody}>
             {props.body}
           </p>
         </div>

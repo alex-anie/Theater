@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 function SocialIcons() {
 return (
   <>
-    <main className="">
-      <Link className="bg-transparent outline-emerald-500 outline-1 outline mr-8 [line-height:40px] w-[fit-content] relative text-center text-white tracking-normal inline-block uppercase font-raleway py-2 px-4 select-none after:content-[''] after:inset-0 after:w-full after:h-full after:bg-gradient-to-r after:from-emerald-500 after:[z-index:-1] after:absolute after:transition-all after:duration-500 after:ease-linear hover:after:[left:10px] hover:after:[top:-10px]"
+    <main className="flex flex-col gap-y-8 mt-12 md:flex md:gap-0 md:flex-row md:mt-0">
+      <Link
+        className="bg-transparent outline-emerald-500 outline-1 outline mr-8 [line-height:40px] w-[fit-content] relative text-center text-white tracking-normal inline-block uppercase font-raleway py-2 px-4 select-none after:content-[''] after:inset-0 after:w-full after:h-full after:bg-gradient-to-r after:from-emerald-500 after:[z-index:-1] after:absolute after:transition-all after:duration-500 after:ease-linear hover:after:[left:10px] hover:after:[top:-10px]"
         to="https://www.twitter.com/ocxigin"
         target="_blank"
       >

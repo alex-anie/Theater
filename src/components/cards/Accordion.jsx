@@ -1,7 +1,6 @@
 import accordionData from '../../apis/accordionData.js';
 import { useState } from 'react';
 import "../../custom.css"
-// import { Link } from "react-router-dom";
 
 function Accordion() {
       const [select, setSelect] = useState(null)
@@ -11,7 +10,6 @@ function Accordion() {
         setSelect(index === select ? null : index);
     }
 
-    // let accordionIcon = !select ?  "+" : "-"
   return (
     <main>
       <div className="w-[60em] font-medium tracking-wide font-raleway text-white">

@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 function Summer(props) {
   return (
     <>
-      <Link>
+      <Link to={props.link}>
         <main className="relative">
-          <aside className="group w-72 rounded-md cursor-pointer hover:ring-4 hover:ring-[#34d399] transition-all duration-500 ease-in-out relative before:content-[''] before:block before:w-full before:h-0 before:rounded-md before:absolute before:left-0 before:bottom-0 before:bg-white/50 before:backdrop-blur-sm before:transition-all before:duration-500 before:ease-in-out hover:before:h-full [&_h1]:hover:opacity-100">
+          <aside
+            className="group rounded-md cursor-pointer hover:ring-4 hover:ring-[#34d399] transition-all duration-500 ease-in-out relative before:content-[''] before:block before:w-full before:h-0 before:rounded-md before:absolute before:left-0 before:bottom-0 before:bg-white/50 before:backdrop-blur-sm before:transition-all before:duration-500 before:ease-in-out hover:before:h-full [&_h1]:hover:opacity-100"
+            
+            width={props.width}
+          >
             <img src={props.moviePoster} alt="" className="rounded-md" />
 
             <div className="absolute bottom-0 left-4">

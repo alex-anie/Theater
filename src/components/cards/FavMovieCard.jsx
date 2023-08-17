@@ -2,22 +2,26 @@ import { useState } from "react";
 import StarOutline from "../StarOutline";
 import StarSolid from "../StarSolid";
 import { Link } from "react-router-dom";
+import moviesApi from "../../apis/moviesApi";
 
-function FavMovieCard(props) {
-      const [count, setCount] = useState(0);
+const data = moviesApi.map(item => item)
 
-    function setStarRate(){
-        setCount(count + 1)
-        console.log(count + 1)
-      }
+console.log(data)
 
+function FavMovieCard({ moviePoster, movieTitle, watchlist, trailer}) {
+  const [count, setCount] = useState(0);
+
+  // console.log(count)
+  function setStarRate() {
+    setCount(prevState => prevState + 1)
+  }
 
   return (
     <main>
       <aside className="w-[12em] [height:fit-content] rounded-b-xl">
         <div>
           <img
-            src={props.moviePoster}
+            src={moviePoster}
             alt=""
             className="cursor-pointer hover:opacity-60 saruta"
           />
@@ -43,11 +47,13 @@ function FavMovieCard(props) {
           </span>
           {/* Name of Movie */}
           <p className="font-normal tracking-wide font-raleway text-white text-center py-2">
-            {props.movieTitle}
+            {movieTitle}
           </p>
 
           <div className="flex flex-col gap-y-4">
-            <Link className="px-[5px] py-[5px] bg-white/20 text-white hover:bg-emerald-400 hover:text-black rounded-md transition-color duration-700 ease font-raleway flex justify-center gap-2">
+            <Link className="px-[5px] py-[5px] bg-white/20 text-white hover:bg-emerald-400 hover:text-black rounded-md transition-color duration-700 ease font-raleway flex justify-center gap-2"
+            to={watchlist}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -66,7 +72,9 @@ function FavMovieCard(props) {
               <button>Watchlist</button>
             </Link>
 
-            <Link className="px-[5px] py-[5px] bg-white/20 text-white hover:bg-emerald-400 hover:text-black rounded-md transition-color duration-700 ease font-raleway flex justify-center gap-2">
+            <Link className="px-[5px] py-[5px] bg-white/20 text-white hover:bg-emerald-400 hover:text-black rounded-md transition-color duration-700 ease font-raleway flex justify-center gap-2"
+            to={trailer}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

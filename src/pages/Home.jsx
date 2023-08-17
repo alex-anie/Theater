@@ -90,10 +90,10 @@ function Home() {
                 <div className="mt-8">
                   <div>
                     {/* Add to Watchlist Button */}
-                    <Link className="mr-4 px-[2em] py-[1em] bg-white text-black hover:bg-emerald-400 hover:text-black rounded-full transition-all duration-700 ease font-raleway" 
-                    
-                    to="/Signup"                      
-                      >
+                    <Link
+                      className="mr-4 px-[2em] py-[1em] bg-white text-black hover:bg-emerald-400 hover:text-black rounded-full transition-all duration-700 ease font-raleway"
+                      to="/Signup"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -197,6 +197,7 @@ function Home() {
                   date={moviesApi[10].date}
                   month={moviesApi[10].month}
                   year={moviesApi[10].year}
+                  link="movies"
                 />
 
                 <Summer
@@ -257,6 +258,8 @@ function Home() {
               <aside>
                 <div className="w-[90%] mt-8 mb-4 mx-auto ">
                   <SidebarTitle
+                    styleHeading="inline font-bold tracking-wide font-raleway text-white text-2xl"
+                    styleBody="font-normal tracking-wide font-raleway text-white"
                     heading="Top on theatre this week"
                     body="See what eveyone is talking about on box-office this week"
                   />
@@ -268,32 +271,44 @@ function Home() {
                     moviePoster={moviesApi[0].moviePoster}
                     movieTitle={moviesApi[0].movieTitle}
                     star={moviesApi[0].star}
+                    watchlist="Signup"
+                    trailer="Barbie"
                     // heading="Top 10 on theatre this week"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[1].moviePoster}
                     movieTitle={moviesApi[1].movieTitle}
                     star={moviesApi[1].star}
+                    watchlist="Signup"
+                    trailer="Napoleon"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[2].moviePoster}
                     movieTitle={moviesApi[2].movieTitle}
                     star={moviesApi[2].star}
+                    trailer="TheEqualizer3"
+                    watchlist="Signup"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[3].moviePoster}
                     movieTitle={moviesApi[3].movieTitle}
                     star={moviesApi[3].star}
+                    trailer="Oppenheimer"
+                    watchlist="Signup"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[4].moviePoster}
                     movieTitle={moviesApi[4].movieTitle}
                     star={moviesApi[4].star}
+                    trailer="TheLittleMermaid"
+                    watchlist="Signup"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[5].moviePoster}
                     movieTitle={moviesApi[5].movieTitle}
                     star={moviesApi[5].star}
+                    watchlist="Signup"
+                    trailer="TheNunII"
                   />
                 </div>
               </aside>
@@ -304,6 +319,8 @@ function Home() {
               <aside>
                 <div className="w-[90%] mt-12 mb-4 mx-auto ">
                   <SidebarTitle
+                    styleHeading="inline font-bold tracking-wide font-raleway text-white text-2xl"
+                    styleBody="font-normal tracking-wide font-raleway text-white"
                     heading="Fan favorites"
                     body="Yeah! Exactly what you think, here is what your frends are seeing this weekend"
                   />
@@ -350,6 +367,8 @@ function Home() {
               <aside>
                 <div className="w-[90%] mt-12 mb-4 mx-auto ">
                   <SidebarTitle
+                    styleHeading="inline font-bold tracking-wide font-raleway text-white text-2xl"
+                    styleBody="font-normal tracking-wide font-raleway text-white"
                     heading="Explore what’s streaming"
                     body="There are some hand pick series just for you"
                   />
@@ -396,6 +415,8 @@ function Home() {
               <aside>
                 <div className="w-[90%] mt-12 mb-4 mx-auto ">
                   <SidebarTitle
+                    styleHeading="inline font-bold tracking-wide font-raleway text-white text-2xl"
+                    styleBody="font-normal tracking-wide font-raleway text-white"
                     heading="Cartoons for kids"
                     body="Kids are not left out, check out this new cartoons now on theatre"
                   />

@@ -5,31 +5,31 @@ import FavMovieCard from "../components/cards/FavMovieCard";
 import Footer from "../components/cards/Footer";
 import LandingPage from "../movies/LandingPage";
 
-function Movies() {
+function TheEqualizer3() {
   return (
     <>
       {/* Background Image */}
       <main className="w-screen h-screen overflow-hidden">
         {/* Desktop */}
-        <div className="[background-image:url('https://user-images.githubusercontent.com/78242022/258151733-1dca4aae-dc5e-4c72-8427-b0d5004f580b.jpg')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-full h-full before:content-[''] before:w-full before:h-full before:block before:-inset-0 before:bg-gradient-to-br from-black "></div>
+        <div className="[background-image:url('https://user-images.githubusercontent.com/78242022/258574748-0225a43a-bfbb-4bd1-9560-84d0fc1e245e.jpg')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-full h-full before:content-[''] before:w-full before:h-full before:block before:-inset-0 before:bg-gradient-to-tr before:from-black from-50deg to-90%"></div>
       </main>
 
       {/* Text and YouTube Iframe*/}
       <main>
         <LandingPage
-          movieImg={moviesApi[10].movieImg}
-          movieTitle={moviesApi[10].movieTitle}
-          genre={moviesApi[10].genre}
-          star={moviesApi[10].star}
-          year={moviesApi[10].year}
-          month={moviesApi[10].month}
-          date={moviesApi[10].date}
-          ordinalNumber={moviesApi[10].ordinalNumber}
-          moviePosterLandscape={moviesApi[10].moviePosterLandscape}
-          moviePoster={moviesApi[10].moviePoster}
-          movieDescription={moviesApi[10].movieDescription}
-          iframeSrc={moviesApi[10].iframeSrc}
-          cast={moviesApi[10].cast}
+          movieImg={moviesApi[2].movieImg}
+          movieTitle={moviesApi[2].movieTitle}
+          genre={moviesApi[2].genre}
+          star={moviesApi[2].star}
+          year={moviesApi[2].year}
+          month={moviesApi[2].month}
+          date={moviesApi[2].date}
+          ordinalNumber={moviesApi[2].ordinalNumber}
+          moviePosterLandscape={moviesApi[2].moviePosterLandscape}
+          moviePoster={moviesApi[2].moviePoster}
+          movieDescription={moviesApi[2].movieDescription}
+          iframeSrc={moviesApi[2].iframeSrc}
+          cast={moviesApi[2].cast}
         />
       </main>
 
@@ -48,13 +48,23 @@ function Movies() {
         {/* Movies Card */}
         <div className="mt-4  lg:grid-cols-5 lg:gap-4 md:grid-cols-3 md:gap-2 grid grid-cols-2 gap-2">
           <Summer
+            key={moviesApi[10].id}
+            movieTitle={moviesApi[10].movieTitle}
+            moviePoster={moviesApi[10].moviePoster}
+            date={moviesApi[10].date}
+            month={moviesApi[10].month}
+            year={moviesApi[10].year}
+            link="../movies"
+          />
+
+          <Summer
             key={moviesApi[0].id}
             movieTitle={moviesApi[0].movieTitle}
             moviePoster={moviesApi[0].moviePoster}
             date={moviesApi[0].date}
             month={moviesApi[0].month}
             year={moviesApi[0].year}
-            link="../barbie"
+            link="../Barbie"
           />
 
           <Summer
@@ -68,21 +78,13 @@ function Movies() {
           />
 
           <Summer
-            key={moviesApi[2].id}
-            movieTitle={moviesApi[2].movieTitle}
-            moviePoster={moviesApi[2].moviePoster}
-            date={moviesApi[2].date}
-            month={moviesApi[2].month}
-            year={moviesApi[2].year}
-          />
-
-          <Summer
             key={moviesApi[3].id}
             movieTitle={moviesApi[3].movieTitle}
             moviePoster={moviesApi[3].moviePoster}
             date={moviesApi[3].date}
             month={moviesApi[3].month}
             year={moviesApi[3].year}
+            link="../Oppenheimer"
           />
 
           <Summer
@@ -92,6 +94,7 @@ function Movies() {
             date={moviesApi[4].date}
             month={moviesApi[4].month}
             year={moviesApi[4].year}
+            link="../TheLittleMermaid"
           />
 
           <Summer
@@ -101,6 +104,7 @@ function Movies() {
             date={moviesApi[29].date}
             month={moviesApi[29].month}
             year={moviesApi[29].year}
+            link="../Ghosted"
           />
 
           <Summer
@@ -110,6 +114,7 @@ function Movies() {
             date={moviesApi[5].date}
             month={moviesApi[5].month}
             year={moviesApi[5].year}
+            link="../TheNunII"
           />
 
           <Summer
@@ -119,6 +124,7 @@ function Movies() {
             date={moviesApi[6].date}
             month={moviesApi[6].month}
             year={moviesApi[6].year}
+            link="../BlueBeetle"
           />
 
           <Summer
@@ -128,6 +134,7 @@ function Movies() {
             date={moviesApi[7].date}
             month={moviesApi[7].month}
             year={moviesApi[7].year}
+            link="../BirdBoxBarcelona"
           />
 
           <Summer
@@ -137,6 +144,7 @@ function Movies() {
             date={moviesApi[30].date}
             month={moviesApi[30].month}
             year={moviesApi[30].year}
+            link="../TheMonkeyKing"
           />
 
           <Summer
@@ -146,6 +154,7 @@ function Movies() {
             date={moviesApi[8].date}
             month={moviesApi[8].month}
             year={moviesApi[8].year}
+            link="../TheyClonedTyrone"
           />
 
           <Summer
@@ -155,6 +164,7 @@ function Movies() {
             date={moviesApi[9].date}
             month={moviesApi[9].month}
             year={moviesApi[9].year}
+            link="../CreedIII"
           />
 
           <Summer
@@ -164,6 +174,7 @@ function Movies() {
             date={moviesApi[11].date}
             month={moviesApi[11].month}
             year={moviesApi[11].year}
+            link="../GangsofLagos"
           />
 
           <Summer
@@ -173,6 +184,7 @@ function Movies() {
             date={moviesApi[12].date}
             month={moviesApi[12].month}
             year={moviesApi[12].year}
+            link="../Brotherhood"
           />
 
           <Summer
@@ -182,6 +194,7 @@ function Movies() {
             date={moviesApi[13].date}
             month={moviesApi[13].month}
             year={moviesApi[13].year}
+            link="../IleOwo"
           />
 
           <Summer
@@ -191,6 +204,7 @@ function Movies() {
             date={moviesApi[14].date}
             month={moviesApi[14].month}
             year={moviesApi[14].year}
+            link="../HappinessforBeginners"
           />
 
           <Summer
@@ -200,6 +214,7 @@ function Movies() {
             date={moviesApi[15].date}
             month={moviesApi[15].month}
             year={moviesApi[15].year}
+            link="../LutherTheFallenSun"
           />
 
           <Summer
@@ -209,6 +224,7 @@ function Movies() {
             date={moviesApi[16].date}
             month={moviesApi[16].month}
             year={moviesApi[16].year}
+            link="../TheInvitation"
           />
 
           <Summer
@@ -218,6 +234,7 @@ function Movies() {
             date={moviesApi[17].date}
             month={moviesApi[17].month}
             year={moviesApi[17].year}
+            link="../Medellin"
           />
 
           <Summer
@@ -227,6 +244,7 @@ function Movies() {
             date={moviesApi[18].date}
             month={moviesApi[18].month}
             year={moviesApi[18].year}
+            link="../Asterix"
           />
 
           <Summer
@@ -236,6 +254,7 @@ function Movies() {
             date={moviesApi[19].date}
             month={moviesApi[19].month}
             year={moviesApi[19].year}
+            link="../TheMother"
           />
 
           <Summer
@@ -245,6 +264,7 @@ function Movies() {
             date={moviesApi[20].date}
             month={moviesApi[20].month}
             year={moviesApi[20].year}
+            link="../Renfield"
           />
 
           <Summer
@@ -254,6 +274,7 @@ function Movies() {
             date={moviesApi[21].date}
             month={moviesApi[21].month}
             year={moviesApi[21].year}
+            link="../Chupa"
           />
 
           <Summer
@@ -263,6 +284,7 @@ function Movies() {
             date={moviesApi[22].date}
             month={moviesApi[22].month}
             year={moviesApi[22].year}
+            link="../WeHaveaGhost"
           />
 
           <Summer
@@ -272,6 +294,7 @@ function Movies() {
             date={moviesApi[23].date}
             month={moviesApi[23].month}
             year={moviesApi[23].year}
+            link="../Wonka"
           />
 
           <Summer
@@ -281,6 +304,7 @@ function Movies() {
             date={moviesApi[24].date}
             month={moviesApi[24].month}
             year={moviesApi[24].year}
+            link="../IndianaJones"
           />
 
           <Summer
@@ -290,6 +314,7 @@ function Movies() {
             date={moviesApi[25].date}
             month={moviesApi[25].month}
             year={moviesApi[25].year}
+            link="../Crater"
           />
 
           <Summer
@@ -299,6 +324,7 @@ function Movies() {
             date={moviesApi[26].date}
             month={moviesApi[26].month}
             year={moviesApi[26].year}
+            link="../ShawshankRedemption"
           />
 
           <Summer
@@ -308,6 +334,7 @@ function Movies() {
             date={moviesApi[27].date}
             month={moviesApi[27].month}
             year={moviesApi[27].year}
+            link="../MissionImpossible"
           />
 
           <Summer
@@ -317,6 +344,7 @@ function Movies() {
             date={moviesApi[28].date}
             month={moviesApi[28].month}
             year={moviesApi[28].year}
+            link="../FlowerMoon"
           />
         </div>
       </main>
@@ -374,31 +402,43 @@ function Movies() {
               moviePoster={moviesApi[31].moviePoster}
               movieTitle={moviesApi[31].movieTitle}
               star={moviesApi[31].star}
+              watchlist="Signup"
+              trailer="../Migration"
             />
             <FavMovieCard
               moviePoster={moviesApi[32].moviePoster}
               movieTitle={moviesApi[32].movieTitle}
               star={moviesApi[32].star}
+              watchlist="Signup"
+              trailer="../SpiderMan"
             />
             <FavMovieCard
               moviePoster={moviesApi[33].moviePoster}
               movieTitle={moviesApi[33].movieTitle}
               star={moviesApi[33].star}
+              watchlist="Signup"
+              trailer="../TheMagician"
             />
             <FavMovieCard
               moviePoster={moviesApi[34].moviePoster}
               movieTitle={moviesApi[34].movieTitle}
               star={moviesApi[34].star}
+              watchlist="Signup"
+              trailer="../Rango"
             />
             <FavMovieCard
               moviePoster={moviesApi[35].moviePoster}
               movieTitle={moviesApi[35].movieTitle}
               star={moviesApi[35].star}
+              watchlist="Signup"
+              trailer="../TheLorax"
             />
             <FavMovieCard
               moviePoster={moviesApi[36].moviePoster}
               movieTitle={moviesApi[36].movieTitle}
               star={moviesApi[36].star}
+              watchlist="Signup"
+              trailer="../PussinBoots"
             />
           </div>
         </div>
@@ -415,4 +455,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default TheEqualizer3;

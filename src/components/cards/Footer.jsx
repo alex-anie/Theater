@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
       <main>
-        <section className="grid grid-cols-3  w-[80%] mx-auto my-2">
+        <section className="grid md:grid-cols-3 grid-cols-1  w-[80%] mx-auto my-2">
           <div>
             <ul className="[&_li]:m-8 [&_li]:text-zinc-400 font-medium tracking-wide font-raleway pt-4">
               {/* FAQ */}
@@ -99,7 +99,7 @@ function Footer() {
         <hr />
 
         {/* Logo  and Social Icons */}
-        <section className="flex justify-between w-[80%] mx-auto mt-8">
+        <section className="md:flex md:justify-between w-[80%] mx-auto mt-8">
           {/* Logo */}
           <div>
             <Link to="/">
@@ -113,7 +113,7 @@ function Footer() {
         </section>
 
         {/* All Reight */}
-        <section className="flex justify-between w-[80%] mx-auto mt-8">
+        <section className="md:flex md:justify-between w-[80%] mx-auto mt-8">
           {/* All right */}
           <div>
             <p className="text-zinc-400 font-medium tracking-wide font-raleway pt-4">
