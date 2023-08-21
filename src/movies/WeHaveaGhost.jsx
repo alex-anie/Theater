@@ -25,7 +25,7 @@ function WeHaveaGhost() {
           month={moviesApi[22].month}
           date={moviesApi[22].date}
           ordinalNumber={moviesApi[22].ordinalNumber}
-          moviePosterLandscape={moviesApi[2].moviePosterLandscape}
+          moviePosterLandscape={moviesApi[22].moviePosterLandscape}
           moviePoster={moviesApi[22].moviePoster}
           movieDescription={moviesApi[22].movieDescription}
           iframeSrc={moviesApi[22].iframeSrc}

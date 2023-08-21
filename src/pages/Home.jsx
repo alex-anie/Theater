@@ -11,6 +11,7 @@ import EmailField from "../components/cards/EmailField";
 import Footer from "../components/cards/Footer";
 
 import moviesApi from "../apis/moviesApi";
+// import { useState, useRef, useEffect } from "react";
 
 function Home() {
   // CSS Styles for Background-image for Home page
@@ -24,7 +25,7 @@ function Home() {
       "background-position": "center center",
       "-webkit-mask": `linear-gradient(to bottom, transparent 0%, black 100%)`,
       'mask': `linear-gradient(to bottom, transparent 0%, black 100%)`,
-    };
+    };   
 
     return (
       <>
@@ -35,7 +36,7 @@ function Home() {
               style={heroBg}
               className="w-full h-full relative before:content-[''] before:block before:w-full before:h-full before:bg-gradient-to-tr before:from-[#000] before:to-[transparent] before:absolute before:inset-0"
             ></div>
-            <header className="w-[38%] absolute left-8 top-40 text-white">
+            <header className="lg:w-[38%] w-[80%] absolute left-8 top-40 text-white ">
               <section className="absolute">
                 {/* Name of Movie */}
                 <div className="">
@@ -88,10 +89,10 @@ function Home() {
 
                 {/* Buttons */}
                 <div className="mt-8">
-                  <div>
+                  <div className="flex flex-col md:flex-row">
                     {/* Add to Watchlist Button */}
                     <Link
-                      className="mr-4 px-[2em] py-[1em] bg-white text-black hover:bg-emerald-400 hover:text-black rounded-full transition-all duration-700 ease font-raleway"
+                      className="mr-4 px-[2em] py-[1em] bg-white text-black hover:bg-emerald-400 hover:text-black rounded-full transition-all duration-700 ease font-raleway w-[fit-content]"
                       to="/Signup"
                     >
                       <svg
@@ -113,7 +114,7 @@ function Home() {
                     </Link>
 
                     {/*Trailer Button  */}
-                    <Link className="px-[2em] py-[1em] bg-white text-black hover:bg-emerald-400 hover:text-black rounded-full transition-all duration-700 ease font-raleway">
+                    <Link className="px-[2em] py-[1em]  bg-white text-black hover:bg-emerald-400 hover:text-black rounded-full transition-all duration-700 ease font-raleway w-[fit-content] mt-4 md:mt-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -137,7 +138,7 @@ function Home() {
 
             {/* Youtube Embed */}
             <section>
-              <div className="absolute right-12 top-40">
+              <div className="lg:absolute lg:right-12 lg:top-40 mb-12 ml-12 block">
                 <iframe
                   src="https://www.youtube.com/embed/DotnJ7tTA34?vq=hd1080&autoplay=1&loop=1&modestbranding=1&rel=0&cc_load_policy=1&fs=0&color=white&controls=0&disablekb=1&playlist=DotnJ7tTA34"
                   width="560"
@@ -170,7 +171,7 @@ function Home() {
           </main>
 
           {/* Coming Soon Movies */}
-          <main className="bg-[#0b0c0f] mb-12">
+          <main className="bg-[#0b0c0f] lg:mb-12 mt-[20em] lg:mt-0 ">
             <section className="flex justify-center ">
               <aside className="w-[50%] text-center mt-8 [&_p]:mb-4 [&_h1]:mb-4">
                 <p className="font-bold tracking-wide font-raleway uppercase text-[#34d399]">
@@ -189,7 +190,7 @@ function Home() {
 
             {/* Next coming movies series */}
             <section>
-              <div className="grid grid-cols-4 mx-12 pb-12">
+              <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 mx-12 pb-12 gap-4">
                 <Summer
                   key={moviesApi[10].id}
                   movieTitle={moviesApi[10].movieTitle}
@@ -207,6 +208,7 @@ function Home() {
                   date={moviesApi[5].date}
                   month={moviesApi[5].month}
                   year={moviesApi[5].year}
+                  link="../TheNunII"
                 />
 
                 <Summer
@@ -216,6 +218,7 @@ function Home() {
                   date={moviesApi[5].date}
                   month={moviesApi[5].month}
                   year={moviesApi[5].year}
+                  link="../BlueBeetle"
                 />
 
                 <Summer
@@ -225,6 +228,7 @@ function Home() {
                   date={moviesApi[16].date}
                   month={moviesApi[16].month}
                   year={moviesApi[16].year}
+                  link="../TheInvitation"
                 />
               </div>
             </section>
@@ -247,7 +251,7 @@ function Home() {
                       to watch.
                     </p>
                     {/* button Signin to watchlist */}
-                    <Link className="flex justify-center my-8">
+                    <Link className="flex justify-center my-8" to="/Signup">
                       <button className="[background-color:rgba(255,255,255,.2);] [width:fit-content] leading-8 text-[#34d399] font-bold px-4 rounded-sm hover:[background-color:rgba(255,255,255,.9);] hover:text-black transition-colors duration-500 ease-linear">
                         Sign in to theatre
                       </button>
@@ -266,7 +270,7 @@ function Home() {
                 </div>
               </aside>
               <aside className="mt-4 mb-8">
-                <div className="w-[90%] mt-8 mb-4 mx-auto flex gap-x-4">
+                <div className="w-[90%] mt-8 mb-4 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   <FavMovieCard
                     moviePoster={moviesApi[0].moviePoster}
                     movieTitle={moviesApi[0].movieTitle}
@@ -327,36 +331,48 @@ function Home() {
                 </div>
               </aside>
               <aside className="mt-4 mb-8">
-                <div className="w-[90%] mt-8 mb-4 mx-auto flex gap-x-4">
+                <div className="w-[90%] mt-8 mb-4 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   <FavMovieCard
                     moviePoster={moviesApi[6].moviePoster}
                     movieTitle={moviesApi[6].movieTitle}
                     star={moviesApi[6].star}
+                    watchlist="Signup"
+                    trailer="BlueBeetle"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[7].moviePoster}
                     movieTitle={moviesApi[7].movieTitle}
                     star={moviesApi[7].star}
+                    watchlist="Signup"
+                    trailer="BirdBoxBarcelona"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[8].moviePoster}
                     movieTitle={moviesApi[8].movieTitle}
                     star={moviesApi[8].star}
+                    watchlist="Signup"
+                    trailer="TheyClonedTyrone"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[9].moviePoster}
                     movieTitle={moviesApi[9].movieTitle}
                     star={moviesApi[9].star}
+                    watchlist="Signup"
+                    trailer="CreedIII"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[10].moviePoster}
                     movieTitle={moviesApi[10].movieTitle}
                     star={moviesApi[10].star}
+                    watchlist="Signup"
+                    trailer="Movies"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[11].moviePoster}
                     movieTitle={moviesApi[11].movieTitle}
                     star={moviesApi[11].star}
+                    watchlist="Signup"
+                    trailer="GangsofLagos"
                   />
                 </div>
               </aside>
@@ -375,36 +391,48 @@ function Home() {
                 </div>
               </aside>
               <aside className="mt-4 mb-8">
-                <div className="w-[90%] mt-8 mb-4 mx-auto flex gap-x-4">
+                <div className="w-[90%] mt-8 mb-4 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   <FavMovieCard
                     moviePoster={moviesApi[41].moviePoster}
                     movieTitle={moviesApi[41].movieTitle}
                     star={moviesApi[41].star}
+                    watchlist="Signup"
+                    trailer="Vikings"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[42].moviePoster}
                     movieTitle={moviesApi[42].movieTitle}
                     star={moviesApi[42].star}
+                    watchlist="Signup"
+                    trailer="HouseoftheDragon"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[43].moviePoster}
                     movieTitle={moviesApi[43].movieTitle}
                     star={moviesApi[43].star}
+                    watchlist="Signup"
+                    trailer="GameofThrones"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[44].moviePoster}
                     movieTitle={moviesApi[44].movieTitle}
                     star={moviesApi[44].star}
+                    watchlist="Signup"
+                    trailer="IntotheBadlands"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[45].moviePoster}
                     movieTitle={moviesApi[45].movieTitle}
                     star={moviesApi[45].star}
+                    watchlist="Signup"
+                    trailer="TheWitcher"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[46].moviePoster}
                     movieTitle={moviesApi[46].movieTitle}
                     star={moviesApi[46].star}
+                    watchlist="Signup"
+                    trailer="Heroes"
                   />
                 </div>
               </aside>
@@ -413,7 +441,7 @@ function Home() {
             {/* Fourth */}
             <section>
               <aside>
-                <div className="w-[90%] mt-12 mb-4 mx-auto ">
+                <div className="w-[90%] mt-8 mb-4 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   <SidebarTitle
                     styleHeading="inline font-bold tracking-wide font-raleway text-white text-2xl"
                     styleBody="font-normal tracking-wide font-raleway text-white"
@@ -423,36 +451,48 @@ function Home() {
                 </div>
               </aside>
               <aside className="mt-4 mb-8">
-                <div className="w-[90%] mt-8 mb-4 mx-auto flex gap-x-4">
+                <div className="w-[90%] mt-8 mb-4 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   <FavMovieCard
                     moviePoster={moviesApi[31].moviePoster}
                     movieTitle={moviesApi[31].movieTitle}
                     star={moviesApi[31].star}
+                    watchlist="Signup"
+                    trailer="Cartoon"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[32].moviePoster}
                     movieTitle={moviesApi[32].movieTitle}
                     star={moviesApi[32].star}
+                    watchlist="Signup"
+                    trailer="SpiderMan"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[33].moviePoster}
                     movieTitle={moviesApi[33].movieTitle}
                     star={moviesApi[33].star}
+                    watchlist="Signup"
+                    trailer="TheMagician"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[34].moviePoster}
                     movieTitle={moviesApi[34].movieTitle}
                     star={moviesApi[34].star}
+                    watchlist="Signup"
+                    trailer="Rango"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[35].moviePoster}
                     movieTitle={moviesApi[35].movieTitle}
                     star={moviesApi[35].star}
+                    watchlist="Signup"
+                    trailer="TheLorax"
                   />
                   <FavMovieCard
                     moviePoster={moviesApi[36].moviePoster}
                     movieTitle={moviesApi[36].movieTitle}
                     star={moviesApi[36].star}
+                    watchlist="Signup"
+                    trailer="PussinBoots"
                   />
                 </div>
               </aside>
@@ -497,7 +537,10 @@ function Home() {
 
               {/* button */}
               <div className="flex justify-center mt-4">
-                <Link className="[background-color:rgba(255,255,255,.2);] [width:fit-content] leading-8 text-[#34d399] font-bold px-4 rounded-sm hover:[background-color:rgba(255,255,255,.9);] hover:text-black transition-colors duration-500 ease-linear">
+                <Link
+                  className="[background-color:rgba(255,255,255,.2);] [width:fit-content] leading-8 text-[#34d399] font-bold px-4 rounded-sm hover:[background-color:rgba(255,255,255,.9);] hover:text-black transition-colors duration-500 ease-linear"
+                  to="/Signup"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -523,10 +566,10 @@ function Home() {
           {/* Line top*/}
           <div className="w-screen h-2 [background-color:rgba(255,255,255,.2);]"></div>
           <main>
-            <aside className="mt-20 flex justify-start">
+            <aside className="mt-2 lg:mt-20 flex justify-start">
               <div>
-                <div className="[transform:translate(100px,100px)]">
-                  <h1 className="w-[28em] tracking-wide font-raleway text-white font-black text-4xl capitalize">
+                <div className="lg:[transform:translate(100px,100px)]">
+                  <h1 className="w-[10em] lg:w-[28em] tracking-wide font-raleway text-white font-black text-4xl capitalize">
                     Enjoy on your TV
                   </h1>
                   <p className="w-[28em] font-medium tracking-wide font-raleway text-white pt-4">
@@ -540,10 +583,12 @@ function Home() {
                 </div>
 
                 {/* Video */}
-                <section className="relative">
-                  <div className="[transform:translate(600px,-100px)]">
+                <section className="hidden md:relative md:block">
+                  <div className="text-white [background-image:url('https://user-images.githubusercontent.com/78242022/256215867-c2954f48-767a-4541-8034-a2ab7bd48249.png')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-[600px] h-[400px] absolute lg:[transform:translate(570px,-150px)] [transform:translate(20px,-30px)] z-10"></div>
+                  <div className="lg:[transform:translate(600px,-100px)] [transform:translate(20px,-30px)]">
+                    {/* {console.log(playVideoElement)} */}
                     <iframe
-                      src="https://www.youtube.com/embed/r51cYVZWKdY?vq=hd1080&autoplay=1&loop=1&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0&color=white&controls=0&disablekb=1&playlist=r51cYVZWKdY"
+                      src="https://www.youtube.com/embed/r51cYVZWKdY?vq=hd1080&autoplay=0&loop=1&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0&color=white&controls=0&disablekb=1&playlist=r51cYVZWKdY"
                       width="560"
                       height="315"
                       title="The Flash - Official Trailer 2"
@@ -603,7 +648,7 @@ function Home() {
                       viewBox="0 0 24 24"
                       width="80"
                       height="80"
-                      className="main-grid-item-icon"
+                      className="main-grid-item-icon animate-bounce"
                       fill="none"
                       stroke="#34d399"
                       strokeLinecap="round"
@@ -670,7 +715,7 @@ function Home() {
 
           {/* Accordion */}
           <main>
-            <section className="w-[70%] mt-12 mb-4 mx-auto ">
+            <section className="w-[90%] mt-12 mb-4 mx-auto ">
               <div className="mb-4 flex justify-center">
                 <Badge />
               </div>
@@ -705,3 +750,4 @@ function Home() {
 }
 
 export default Home;
+

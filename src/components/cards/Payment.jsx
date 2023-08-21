@@ -1,6 +1,7 @@
 function Payment() {
   return (
-    <main className="flex gap-x-5">
+    // <main className="flex gap-x-5">
+    <main className="grid grid-cols-3 md:grid-cols-8  md:grid-rows-2 ">
       {/* Amazon */}
       <div>
         <svg

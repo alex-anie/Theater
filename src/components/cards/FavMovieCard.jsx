@@ -18,7 +18,8 @@ function FavMovieCard({ moviePoster, movieTitle, watchlist, trailer}) {
 
   return (
     <main>
-      <aside className="w-[12em] [height:fit-content] rounded-b-xl">
+      {/* <aside className="w-[12em] [height:fit-content] rounded-b-xl"> */}
+      <aside className="[height:fit-content] rounded-b-xl">
         <div>
           <img
             src={moviePoster}

@@ -5,30 +5,30 @@ import FavMovieCard from "../components/cards/FavMovieCard";
 import Footer from "../components/cards/Footer";
 import LandingPage from "../movies/LandingPage";
 
-function RubyGillman() {
+function Cartoon() {
   return (
     <>
       {/* Background Image */}
       <main className="w-screen h-screen overflow-hidden">
         {/* Desktop */}
-        <div className="[background-image:url('https://user-images.githubusercontent.com/78242022/261406559-5f084c2c-bd3e-47cd-8f75-ed48c999c218.png')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-full h-full before:content-[''] before:w-full before:h-full before:block before:-inset-0 before:bg-gradient-to-tr before:from-black from-50deg to-90%"></div>
+        <div className="[background-image:url('https://user-images.githubusercontent.com/78242022/261334581-7ae5c030-1d7d-46c9-8b64-810b14d5784c.jpg')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-full h-full before:content-[''] before:w-full before:h-full before:block before:-inset-0 before:bg-gradient-to-tr before:from-black from-50deg to-90%"></div>
       </main>
 
       {/* Text and YouTube Iframe*/}
       <main>
         <LandingPage
-          movieImg={moviesApi[38].movieImg}
-          movieTitle={moviesApi[38].movieTitle}
-          genre={moviesApi[38].genre}
-          star={moviesApi[38].star}
-          year={moviesApi[38].year}
-          month={moviesApi[38].month}
-          date={moviesApi[38].date}
-          moviePosterLandscape={moviesApi[38].moviePosterLandscape}
-          moviePoster={moviesApi[38].moviePoster}
-          movieDescription={moviesApi[38].movieDescription}
-          iframeSrc={moviesApi[38].iframeSrc}
-          cast={moviesApi[38].cast}
+          movieImg={moviesApi[31].movieImg}
+          movieTitle={moviesApi[31].movieTitle}
+          genre={moviesApi[31].genre}
+          star={moviesApi[31].star}
+          year={moviesApi[31].year}
+          month={moviesApi[31].month}
+          date={moviesApi[31].date}
+          moviePosterLandscape={moviesApi[31].moviePosterLandscape}
+          moviePoster={moviesApi[31].moviePoster}
+          movieDescription={moviesApi[31].movieDescription}
+          iframeSrc={moviesApi[31].iframeSrc}
+          cast={moviesApi[31].cast}
         />
       </main>
 
@@ -57,23 +57,13 @@ function RubyGillman() {
           />
 
           <Summer
-            key={moviesApi[31].id}
-            movieTitle={moviesApi[31].movieTitle}
-            moviePoster={moviesApi[31].moviePoster}
-            date={moviesApi[31].date}
-            month={moviesApi[31].month}
-            year={moviesApi[31].year}
-            link="../Cartoon"
-          />
-
-          <Summer
             key={moviesApi[33].id}
             movieTitle={moviesApi[33].movieTitle}
             moviePoster={moviesApi[33].moviePoster}
             date={moviesApi[33].date}
             month={moviesApi[33].month}
             year={moviesApi[33].year}
-            link="../Migration"
+            link="../TheMagician"
           />
 
           <Summer
@@ -114,6 +104,16 @@ function RubyGillman() {
             month={moviesApi[37].month}
             year={moviesApi[37].year}
             link="../MutantNinja"
+          />
+
+          <Summer
+            key={moviesApi[38].id}
+            movieTitle={moviesApi[38].movieTitle}
+            moviePoster={moviesApi[38].moviePoster}
+            date={moviesApi[38].date}
+            month={moviesApi[38].month}
+            year={moviesApi[38].year}
+            link="../RubyGillman"
           />
 
           <Summer
@@ -244,4 +244,4 @@ function RubyGillman() {
   );
 }
 
-export default RubyGillman;
+export default Cartoon;

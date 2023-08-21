@@ -5,31 +5,31 @@ import FavMovieCard from "../components/cards/FavMovieCard";
 import Footer from "../components/cards/Footer";
 import LandingPage from "../movies/LandingPage";
 
-function BlueBeetle() {
+function MissionImpossible() {
   return (
     <>
       {/* Background Image */}
       <main className="w-screen h-screen overflow-hidden">
         {/* Desktop */}
-        <div className="[background-image:url('https://user-images.githubusercontent.com/78242022/258580574-b7a1781b-56d6-4326-81ca-c3d213be8844.jpg')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-full h-full before:content-[''] before:w-full before:h-full before:block before:-inset-0 before:bg-gradient-to-tr before:from-black from-50deg to-90%"></div>
+        <div className="[background-image:url('https://user-images.githubusercontent.com/78242022/261235364-74b0d029-2f1d-422c-bd80-57d80e005d1b.png')] [background-size:cover] [background-position:center_center] [background-repeat:no-repeat] w-full h-full before:content-[''] before:w-full before:h-full before:block before:-inset-0 before:bg-gradient-to-tr before:from-black from-50deg to-90%"></div>
       </main>
 
       {/* Text and YouTube Iframe*/}
       <main>
         <LandingPage
-          movieImg={moviesApi[6].movieImg}
-          movieTitle={moviesApi[6].movieTitle}
-          genre={moviesApi[6].genre}
-          star={moviesApi[6].star}
-          year={moviesApi[6].year}
-          month={moviesApi[6].month}
-          date={moviesApi[6].date}
-          ordinalNumber={moviesApi[6].ordinalNumber}
-          moviePosterLandscape={moviesApi[6].moviePosterLandscape}
-          moviePoster={moviesApi[6].moviePoster}
-          movieDescription={moviesApi[6].movieDescription}
-          iframeSrc={moviesApi[6].iframeSrc}
-          cast={moviesApi[6].cast}
+          movieImg={moviesApi[27].movieImg}
+          movieTitle={moviesApi[27].movieTitle}
+          genre={moviesApi[27].genre}
+          star={moviesApi[27].star}
+          year={moviesApi[27].year}
+          month={moviesApi[27].month}
+          date={moviesApi[27].date}
+          ordinalNumber={moviesApi[27].ordinalNumber}
+          moviePosterLandscape={moviesApi[27].moviePosterLandscape}
+          moviePoster={moviesApi[27].moviePoster}
+          movieDescription={moviesApi[27].movieDescription}
+          iframeSrc={moviesApi[27].iframeSrc}
+          cast={moviesApi[27].cast}
         />
       </main>
 
@@ -128,6 +128,16 @@ function BlueBeetle() {
           />
 
           <Summer
+            key={moviesApi[6].id}
+            movieTitle={moviesApi[6].movieTitle}
+            moviePoster={moviesApi[6].moviePoster}
+            date={moviesApi[6].date}
+            month={moviesApi[6].month}
+            year={moviesApi[6].year}
+            link="../BlueBeetle"
+          />
+
+          <Summer
             key={moviesApi[7].id}
             movieTitle={moviesApi[7].movieTitle}
             moviePoster={moviesApi[7].moviePoster}
@@ -162,8 +172,8 @@ function BlueBeetle() {
             movieTitle={moviesApi[9].movieTitle}
             moviePoster={moviesApi[9].moviePoster}
             date={moviesApi[9].date}
-            month={moviesApi[9].month}
-            year={moviesApi[9].year}
+            month={moviesApi[11].month}
+            year={moviesApi[11].year}
             link="../CreedIII"
           />
 
@@ -328,16 +338,6 @@ function BlueBeetle() {
           />
 
           <Summer
-            key={moviesApi[27].id}
-            movieTitle={moviesApi[27].movieTitle}
-            moviePoster={moviesApi[27].moviePoster}
-            date={moviesApi[27].date}
-            month={moviesApi[27].month}
-            year={moviesApi[27].year}
-            link="../MissionImpossible"
-          />
-
-          <Summer
             key={moviesApi[28].id}
             movieTitle={moviesApi[28].movieTitle}
             moviePoster={moviesApi[28].moviePoster}
@@ -455,4 +455,4 @@ function BlueBeetle() {
   );
 }
 
-export default BlueBeetle;
+export default MissionImpossible;

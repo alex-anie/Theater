@@ -45,6 +45,16 @@ function Navbar() {
 
               <li>
                 <NavLink
+                  to="/Cartoon"
+                  style={navLinkStyles}
+                  className="px-[8px] py-[5px] hover:bg-emerald-400 hover:text-black rounded-xl transition-all duration-700  font-raleway"
+                >
+                  Cartoon
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
                   to="/Plan"
                   style={navLinkStyles}
                   className="px-[8px] py-[5px] hover:bg-emerald-400 hover:text-black rounded-xl transition-all duration-700 ease font-raleway"
@@ -56,15 +66,15 @@ function Navbar() {
           </section>
 
           {/* Site Logo */}
-          <section>
+          <section className="hidden md:block">
             <div>
-              <img src={NavLogo} alt="" className='w-[8em]'/>
+              <img src={NavLogo} alt="" className="w-[8em]" />
             </div>
           </section>
 
           {/* CTA buttons */}
-          <section>
-            <ul className='flex gap-4 mb-4'>
+          <section className="hidden md:block">
+            <ul className="flex gap-4 mb-4">
               <li>
                 <NavLink
                   to="/Signin"

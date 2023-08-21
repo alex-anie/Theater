@@ -1,52 +1,19 @@
 import { Link } from "react-router-dom";
-import Checkmark from '../Checkmark';
 
-function SignupCard() {
+function SigninCard() {
 return (
   <main>
     <section className="flex justify-center">
       <aside className="bg-white w-[60%] rounded-md flex absolute top-[15%]">
-        {/* Signup instruction */}
-        <div className="w-[80%] mx-4 my-6">
-          <div>
-            <h1 className="text-2xl font-bold font-raleway mb-12">
-              Sign up and start enjoying Theatre
-            </h1>
-          </div>
-          <div>
-            <p className="font-raleway pb-8">
-              <Checkmark SvgWeight="18" SvgHeight="18" />
-              <em className="pl-[10px] not-italic">
-                Cancel at any time YOU want.
-              </em>
-            </p>
-            <p className="font-raleway pb-8">
-              <Checkmark SvgWeight="18" SvgHeight="18" />
-              <em className="pl-[10px] not-italic">
-                Change plans at any time.
-              </em>
-            </p>
-            <p className="font-raleway">
-              <Checkmark SvgWeight="18" SvgHeight="18" />
-              <em className="pl-[10px] not-italic">
-                Only a few steps ahead to watch.
-              </em>
-            </p>
-          </div>
-        </div>
-
         {/* Create acount and Singin  */}
         <div className="bg-zinc-100 pb-8">
           <div className="mb-4">
             <p className="text-1xl font-bold font-raleway inline-block px-8 py-4 bg-zinc-100 w-[50%]">
-              Create account
+              Sign in
             </p>
 
-            <Link
-              className="font-bold font-raleway inline-block px-8 py-4 bg-white w-[50%]"
-              to="../Signin"
-            >
-              <p>Sign up</p>
+            <Link className="font-bold font-raleway inline-block px-8 py-4 bg-white w-[50%]" to="../Signup">
+              <p>Create account</p>
             </Link>
           </div>
           <div className="w-[85%] mx-auto mt-8">
@@ -110,7 +77,13 @@ return (
             {/* Button */}
             <span>
               <Link className="block bg-emerald-500 text-white font-raleway w-[fit-content] rounded-full py-4 px-8 hover:opacity-80">
-                create new account
+                Signin
+              </Link>
+            </span>
+
+            <span className="my-4 block">
+              <Link className="text-emerald-500">
+                Forget Password
               </Link>
             </span>
           </div>
@@ -134,4 +107,4 @@ return (
 );
 }
 
-export default SignupCard;
+export default SigninCard;

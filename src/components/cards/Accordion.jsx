@@ -12,7 +12,7 @@ function Accordion() {
 
   return (
     <main>
-      <div className="w-[60em] font-medium tracking-wide font-raleway text-white">
+      <div className="w-[90%] font-medium tracking-wide font-raleway text-white">
         {accordionData.map((item, index) => (
           <>
             <div key={index} className="mb-3">
